@@ -2,8 +2,7 @@
   "name": "my-js-dev-environment",
   "version": "1.0.0",
   "description": "JavaScript Development Environment by Emmett Brogan",
-  "scripts": {
-  },
+  "scripts": {},
   "author": "Emmett Brogan",
   "license": "MIT",
   "dependencies": {
