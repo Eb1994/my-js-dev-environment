@@ -1,10 +1,10 @@
-var express = require('express');
-var path = require('path');
-var open = require('open');
+import express from 'express';
+import path from 'path';
+import open from 'open';
 
-var port = 3000;
+const port = 3000;
 //Create instance of express server
-var app = express();
+const app = express();
 
 //read from file where to load up first page
 app.get('/', function(req, res) {

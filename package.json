@@ -2,7 +2,15 @@
   "name": "my-js-dev-environment",
   "version": "1.0.0",
   "description": "JavaScript Development Environment by Emmett Brogan",
-  "scripts": {},
+  "scripts": {
+    "prestart": "babel-node buildScripts/startMessage.js",
+    "start": "npm-run-all --parallel security-check open:src",
+    "open:src": "babel-node buildScripts/srcServer.js",
+    "poststart": "babel-node buildScripts/postStartMesssage.js",
+    "security-check": "nsp check",
+    "startlocaltunnel": "lt --port 3000",
+    "share": "npm-run-all --parallel open:src startlocaltunnel"
+  },
   "author": "Emmett Brogan",
   "license": "MIT",
   "dependencies": {
