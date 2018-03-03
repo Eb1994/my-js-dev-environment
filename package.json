@@ -4,12 +4,14 @@
   "description": "JavaScript Development Environment by Emmett Brogan",
   "scripts": {
     "prestart": "babel-node buildScripts/startMessage.js",
-    "start": "npm-run-all --parallel security-check open:src",
+    "start": "npm-run-all --parallel security-check open:src lint:watch",
     "open:src": "babel-node buildScripts/srcServer.js",
+    "lint": "esw webpack.config.* src buildScripts --color",
+    "lint:watch": "npm run lint -- --watch",
     "poststart": "babel-node buildScripts/postStartMesssage.js",
     "security-check": "nsp check",
     "startlocaltunnel": "lt --port 3000",
-    "share": "npm-run-all --parallel open:src startlocaltunnel"
+    "share": "npm-run-all --parallel open:src startlocaltunnel lint:watch"
   },
   "author": "Emmett Brogan",
   "license": "MIT",

@@ -2,6 +2,7 @@ import express from 'express';
 import path from 'path';
 import open from 'open';
 
+/* eslint-disable no-console */
 //From bundling tutorial later
 import webpack from 'webpack';
 import config from '../webpack.config.dev';
