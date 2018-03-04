@@ -9,7 +9,7 @@ describe('Our first test', function() {
   });
 });
 
-//Async test below: use 'done' below to make sure mocha knows it is done, otherwise it will always pass
+//Async test (DOM test + using jsdom to test dom elements) below: use 'done' below to make sure mocha knows it is done, otherwise it will always pass
 describe('index.html', function() {
   it('should say hello', function(done) {
     const index = fs.readFileSync('./src/index.html', "utf-8");
