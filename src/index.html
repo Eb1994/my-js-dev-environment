@@ -1,6 +1,16 @@
+<!--
+NOTE: This the template index.html file that is using some E.js code that adds references to our scripts
+        could change to .ejs file but leave it, as for someone else looking at this they could become confused
+-->
 <!DOCTYPE html>
 <html lang="en">
   <head>
+    <% if (htmlWebpackPlugin.options.trackJSToken) { %>
+    <!-- BEGIN TRACKJS -->
+    <script type="text/javascript">window._trackJs = { token: '<%=htmlWebpackPlugin.options.trackJSToken%>'};</script>
+    <script type="text/javascript" src="https://cdn.trackjs.com/releases/current/tracker.js"></script>
+    <!-- END TRACKJS -->
+    <% } %>
     <meta charset="UTF-8">
   </head>
   <body>
@@ -17,8 +27,5 @@
 
       </tbody>
     </table>
-
-    <p>Best App Ever!!!</p>
-    <script src="bundle.js"></script>
   </body>
 </html>
